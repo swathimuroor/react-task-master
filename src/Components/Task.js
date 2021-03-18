@@ -21,8 +21,7 @@ const Task = ({ task, onDelete, onEdit }) => {
             </p>
             <p>{moment(task.date).format('DD/MM/YYYY')}
                 <div >
-                    {task.id }{task.priority}
-                    <span><BsPencil onClick={()=> onEdit(task.id,task.taskName, task.date, task.assigned, task.priority)}  className='blue' /> </span> 
+                    <span ><BsPencil onClick={()=> onEdit(task.id,task.taskName, task.date, task.assigned, task.priority)}  className='blue' /> </span> 
                     {statusComplete ==='' ? <span><BsCheckCircle onClick={changeStatus} className='green'  /> </span>: ''}
                     <BsTrash  onClick = { ()=> onDelete(task.id)} className='red' />
                 </div>
