@@ -18,7 +18,7 @@ const AddTask = ({onAdd}) => {
         setTaskName('');
         setDate(new Date());
         setAssigned('');
-        setPriority("Low");
+        setPriority('Low');
     }
   
     return (
@@ -26,13 +26,13 @@ const AddTask = ({onAdd}) => {
             <div className="form-control form-control-flex" >
                 <label>Task</label>
                 <input type='text' placeholder='Add new Task' id='taskNameId'
-                value={taskName} 
+                value={taskName} maxLength = '25'
                 onChange={(e) => setTaskName(e.target.value)} />
             </div>
             <div className="form-control form-control-flex">
                 <label>Assign</label>
                 <input type='text' placeholder='Assigned to' 
-                value={assigned} 
+                value={assigned} maxLength = '15'
                 onChange={(e) => setAssigned(e.target.value)} />
             </div>
             <div className="form-control form-control-flex">
@@ -43,9 +43,9 @@ const AddTask = ({onAdd}) => {
             </div>
             <div className="form-control form-control-check" >
                 <label>Priority</label>
-                <input type="radio" value="Low" name="priority" onChange={(e) => setPriority(e.target.value)} />Low
-                <input type="radio" value="Medium" name="priority" onChange={(e) => setPriority(e.target.value)}/> Medium
-                <input type="radio" value="High" name="priority" onChange={(e) => setPriority(e.target.value)}/> High
+                <input type="radio" value="Low" checked={priority==='Low'} name="priority" onChange={(e) =>  setPriority(e.target.value) } />Low
+                <input type="radio" value="Medium" checked={priority==='Medium'} name="priority" onChange={(e) => setPriority(e.target.value)}/> Medium
+                <input type="radio" value="High"  checked={priority==='High'} name="priority" onChange={(e) => setPriority(e.target.value)}/> High
             </div>
             <div className="form-control form-control-flex">
                 <label> </label>

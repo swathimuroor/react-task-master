@@ -13,7 +13,7 @@ const Task = ({ task, onDelete, onEdit }) => {
     }
 
     return (
-        <div className='task' >
+        <div  className={task.priority === 'Low' ? 'task bglow': task.priority === 'Medium'? 'task bgmd': 'task bggh'} >
             <h5><div><BsPeopleCircle /> {task.assigned}  {' '} </div>
             {statusComplete === 'Complete' ? <div className='green' >Completed</div>: '' }</h5>
             <p>  Task:{' '} 
