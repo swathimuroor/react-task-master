@@ -39,7 +39,7 @@ body {
   background: green;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 7px;
   margin: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -72,12 +72,28 @@ body {
   border-left: 5px solid green;
 }
 
-.task h4 {
+.task p {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
+.green{
+  color: green;
+}
+.red{
+  color: red;
+}
+.blue{
+  color: blue;
+}
+.task h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task span{
+  padding-right: 15px;
+}
 .add-form {
   margin-bottom: 40px;
 }

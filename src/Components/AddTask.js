@@ -25,7 +25,7 @@ const AddTask = ({onAdd}) => {
         <form className="add-form " onSubmit={onSubmit}>
             <div className="form-control form-control-flex" >
                 <label>Task</label>
-                <input type='text' placeholder='Add new Task' 
+                <input type='text' placeholder='Add new Task' id='taskNameId'
                 value={taskName} 
                 onChange={(e) => setTaskName(e.target.value)} />
             </div>
@@ -51,8 +51,6 @@ const AddTask = ({onAdd}) => {
                 <label> </label>
                 <input type='submit' value='Save Task' className='btn btn-block'/>
             </div>
-
-            
         </form>
     )
 }

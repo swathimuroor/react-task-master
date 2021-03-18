@@ -9,7 +9,7 @@ function App() {
   //initialise useState hook for task, id and currentId
   const [tasks, setTask] = useState(()=>[]);
   const [id, setId] = useState(() => 1);
-  const [currentId, setCurrentId] = useState(0)
+  const [currentId, setCurrentId] = useState(0);
 
   // save task
   const addTask = (task) =>{
@@ -28,25 +28,24 @@ function App() {
     setTask(tasks.filter((task)=> task.id !== id))
   }
 //edit task
-  const editTask = (id, tasks) =>{
+  const editTask = (id) =>{
     setCurrentId(id);
   }
-
 
   return (
     // task form
     <div className="container-flex">
       <div className='container'>
             <Header title="Task Master"/>
-            <AddTask onAdd={addTask} />
+            <AddTask onAdd={addTask}  />
             <Footer /> 
       </div>
-     {/* tasl list */}
+     {/* task list */}
       <div className='container'>
           <Header title="Task List"/>
           <div className='scroll'>
           {tasks.length > 0 ? 
-            (<TaskList tasks={tasks}  onDelete={deleteTask} onEdit = {editTask} /> )
+            (<TaskList tasks={tasks}  onDelete={deleteTask} onEdit = {editTask}  /> )
             : 'No Tasks to Show' }
           </div>
          
